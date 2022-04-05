@@ -1,0 +1,32 @@
+{
+  "name": "personal-budget",
+  "version": "1.0.0",
+  "description": "application to manage my personal budget",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [
+    "personal-budget",
+    "nodejs",
+    "express",
+    "mysql",
+    "fullstack",
+    "alkemy",
+    "challenge"
+  ],
+  "author": "Agustin Barrio",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "pug": "^3.0.2",
+    "sequelize": "^6.17.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
