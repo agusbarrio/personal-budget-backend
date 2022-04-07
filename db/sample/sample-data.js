@@ -1,6 +1,6 @@
 const fs = require('fs'),
   sampleData = async (operationTable) => {
-    sampleOperations = JSON.parse(
+    sampleOperations = await JSON.parse(
       fs.readFileSync(__dirname + '/sample-data.json', 'utf8')
     );
 
