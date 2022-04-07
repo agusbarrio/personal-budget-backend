@@ -20,7 +20,7 @@ db.Operation = OperationModel;
 
 (async () => {
   await db.sequelize.sync({ force: true });
-  await require('./sample/sample-data.js')(db.Operation);
+  require('./sample/sample-data.js')(db.Operation);
 })();
 
 db.sequelize
