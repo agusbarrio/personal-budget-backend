@@ -18,10 +18,6 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 db.Operation = OperationModel;
 
-(async () => {
-  await require('./sample/sample-data.js')(db.Operation);
-})();
-
 db.sequelize
   .authenticate()
   .then(() => console.log('Database: Successful connection'))
