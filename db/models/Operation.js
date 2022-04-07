@@ -21,8 +21,3 @@ module.exports = (sequelize, DataTypes) => {
   );
   return Operation;
 };
-/* (async () => {
-  await Operation.sync({ force: true });
-  sampleData();
-})();
- */
