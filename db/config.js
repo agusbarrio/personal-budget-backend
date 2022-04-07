@@ -7,7 +7,7 @@ const db = {
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   options: {
-    host: 'localhost',
+    host: process.env.DB_PASSWORD,
     dialect: 'mysql',
     logging: false,
     dialectOptions: {
