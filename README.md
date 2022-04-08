@@ -47,7 +47,8 @@ Para iniciar localmente:
 Conceptos válidos de operaciones:
 - 'entertainment'
 - 'supermarket'
-- 'clothing''services'
+- 'clothing'
+- 'services'
 - 'travels'
 - 'others'
 - 'transport'
