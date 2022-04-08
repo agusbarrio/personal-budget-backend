@@ -18,6 +18,9 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 db.Operation = OperationModel;
 
+(async () => {
+  await db.sequelize.sync();
+})();
 db.sequelize
   .authenticate()
   .then(() => console.log('Database: Successful connection'))
