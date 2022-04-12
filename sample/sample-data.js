@@ -1,11 +1,13 @@
 const fs = require('fs'),
-  sampleData = (operationTable) => {
-    sampleOperations = JSON.parse(
+  sampleData = () => {
+    const sampleOperations = JSON.parse(
       fs.readFileSync(__dirname + '/sample-data.json', 'utf8')
     );
-
-    sampleOperations.forEach(async (el) => await operationTable.create(el));
-    console.log('Sample data uploaded successfully');
+    sampleOperations.forEach((el) => {
+      el.createdAt = new Date();
+      el.updatedAt = new Date();
+    });
+    return sampleOperations;
   };
 
 module.exports = sampleData;

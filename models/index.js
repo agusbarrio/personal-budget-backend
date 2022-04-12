@@ -2,26 +2,21 @@ const Sequelize = require('sequelize'),
   config = require('../config/config.js'),
   db = {};
 
-sequelize = new Sequelize(
-  config.database,
-  config.username,
-  config.password,
-  config.options
-);
+sequelize = new Sequelize(config.database, config.username, config.password, {
+  host: config.host,
+  logging: config.logging,
+  timezone: config.timezone,
+  dialect: config.dialect,
+});
 
 //Models
-const OperationModel = require('./Operation.js')(
+const OperationModel = require('./operation.js')(
   sequelize,
   Sequelize.DataTypes
 );
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 db.Operation = OperationModel;
-
-(async () => {
-  await db.sequelize.sync({ force: true });
-  require('../sample/sample-data')(db.Operation);
-})();
 
 db.sequelize
   .authenticate()
