@@ -26,8 +26,16 @@ Para iniciar localmente:
 4 - Instalar las dependencias necesarias:
 
 	npm install
+	
+5 - Migracion de datos:
 
-5 - Iniciar la aplicación localmente:
+	npx sequelize-cli db:migrate
+	
+6 - Seeders. Datos de ejemplo (opcional):
+
+	npx sequelize-cli db:seed:all
+
+7 - Iniciar la aplicación localmente:
 
 	npm start
 
