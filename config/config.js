@@ -1,7 +1,6 @@
 require('dotenv').config({
   path: `${__dirname}\\..\\.env`,
 });
-console.log(process.env.DB_USER);
 const db = {
   database: process.env.DB_NAME,
   username: process.env.DB_USER,

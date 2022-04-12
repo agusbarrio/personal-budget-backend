@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize'),
-  config = require('./config.js'),
+  config = require('../config/config.js'),
   db = {};
 
 sequelize = new Sequelize(
@@ -10,7 +10,7 @@ sequelize = new Sequelize(
 );
 
 //Models
-const OperationModel = require('./models/Operation.js')(
+const OperationModel = require('./Operation.js')(
   sequelize,
   Sequelize.DataTypes
 );
@@ -19,8 +19,10 @@ db.Sequelize = Sequelize;
 db.Operation = OperationModel;
 
 (async () => {
-  await db.sequelize.sync();
+  await db.sequelize.sync({ force: true });
+  require('../sample/sample-data')(db.Operation);
 })();
+
 db.sequelize
   .authenticate()
   .then(() => console.log('Database: Successful connection'))

@@ -16,8 +16,20 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 //routes
-app.use(require('./router/index.js'));
-app.use('/api/operations', require('./router/operations.js'));
+app.use(require('./routes/index.js'));
+app.use('/api/operations', require('./routes/operations.js'));
+
+//error 404
+app.use(function (req, res, next) {
+  const error = new Error('Not found');
+  error.status = 404;
+  next(error);
+});
+
+// error handler
+app.use(function (err, req, res, next) {
+  res.status(err.status || 500).send(err.message || 'Internal server error');
+});
 
 server = app.listen(app.get('port'), () => {
   console.log(`Server running at port ${app.get('port')}`);
