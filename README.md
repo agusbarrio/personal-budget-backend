@@ -6,8 +6,9 @@ Para iniciar localmente:
 
 1 - Si no la posee, crear la base de datos en MySQL.
 Ejecutar los siquientes comandos en la linea de comandos de MySQL o en MySQLWorkbench:
-CREATE DATABASE IF NOT EXISTS db-name;
-USE db-name;
+
+    CREATE DATABASE IF NOT EXISTS db-name;
+    USE db-name;
 
 2 - Clonar el repositorio.
 Abrir Git Bash en la carpeta donde se desea guardar el proyecto y ejecutar:
