@@ -42,4 +42,13 @@ module.exports = {
       next(error);
     }
   },
+
+  delete: async (req, res, next) => {
+    try {
+      const response = await operationService.delete(req.params.id);
+      res.send('Eliminado correctamente');
+    } catch (error) {
+      next(error);
+    }
+  },
 };

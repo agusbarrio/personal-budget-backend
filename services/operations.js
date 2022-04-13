@@ -32,10 +32,15 @@ operationService = {
     return count;
   },
 
-  validId: (value) => {
+  validId: async (value) => {
     let n = Number(value);
     if (Number.isInteger(n) && n > 0) {
-      return true;
+      const response = await operationsRepository.getById(value);
+      if (response === null) {
+        return false;
+      } else {
+        return response;
+      }
     } else {
       return false;
     }
@@ -63,8 +68,12 @@ operationService = {
   },
 
   getByParam: async (param, limit, offset) => {
-    if (operationService.validId(param)) {
-      let response = await operationsRepository.getById(param);
+    const error = new Error('Not found');
+    error.status = 404;
+
+    let auxResponse = await operationService.validId(param);
+    if (auxResponse) {
+      let response = auxResponse;
       return response;
     }
     if (operationService.validConcept(param)) {
@@ -80,8 +89,6 @@ operationService = {
       return response;
     }
 
-    const error = new Error('Not found');
-    error.status = 404;
     throw error;
   },
 
@@ -92,6 +99,11 @@ operationService = {
 
   update: async (id, data) => {
     let response = await operationsRepository.update(id, data);
+    return response;
+  },
+
+  delete: async (id) => {
+    const response = await operationsRepository.delete(id);
     return response;
   },
 };

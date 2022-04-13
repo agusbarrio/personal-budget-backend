@@ -62,41 +62,45 @@ block content
       tr
         td GET
         td /api/operations
-        td Recupera todas las operaciones
+        td Recupera todas las operaciones.
       tr
         td GET
         td /api/operations?page=n
-        td Recupera las 10 operaciones indicadas por el parámetro n siendo n=1 los primeros 10 registros
+        td Recupera las 10 operaciones indicadas por el parámetro n siendo n=1 los primeros 10 registros.
       tr
         td GET
         td /api/operations/id
-        td Recupera la operación con el id correspondiente
+        td Recupera la operación con el id correspondiente.
       tr
         td GET
         td /api/operations/concept
-        td Recupera todas las operaciones que coincidan con el parámetro concept correspondiente
+        td Recupera todas las operaciones que coincidan con el parámetro concept correspondiente.
       tr
         td GET
         td /api/operations/concept?page=n
-        td Recupera 10 operaciones que coincidan con el parametro concept correspondiente
+        td Recupera 10 operaciones que coincidan con el parametro concept correspondiente.
       tr
         td GET
         td /api/operations/type
-        td Recupera todas las operaciones que coincidan con el type correspondiente
+        td Recupera todas las operaciones que coincidan con el type correspondiente.
       tr
         td GET
         td /api/operations/type?page=n
-        td Recupera 10 operaciones que coincidan con el type correspondiente
+        td Recupera 10 operaciones que coincidan con el type correspondiente.
       tr
         td POST
         td /api/operations
         td Agrega una operación. Se espera recibir un JSON que contenga los atributos 
-          mark concept, amount y _type
+          mark concept, amount y _type.
       tr
         td PUT
         td /api/operations/id
         td Actualiza una operación existente que coincida con el parametro id. Se espera recibir un JSON que contenga los atributos 
-          mark concept y amount
+          mark concept y amount.
+      tr
+        td DELETE
+        td /api/operations/id
+        td Elimina una operación existente que coincida con el parametro id.
 
   h3
     a(href="/") Volver a la página principal. 

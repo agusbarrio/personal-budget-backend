@@ -11,7 +11,6 @@ router.get('/', paginationMiddleware('operations'), operationController.getAll);
 //Get operations by id, concept or type
 router.get(
   '/:param',
-  /* operationMiddleware.paramValidation, */
   paginationMiddleware('operations'),
   operationController.getByParam
 );
@@ -28,6 +27,12 @@ router.put(
   '/:id',
   operationMiddleware.updateValidation,
   operationController.update
+);
+
+router.delete(
+  '/:id',
+  operationMiddleware.deleteValidation,
+  operationController.delete
 );
 
 module.exports = router;

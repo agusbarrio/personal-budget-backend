@@ -22,7 +22,6 @@ Por ejemplo:
       DB_PASSWORD=
       DB_HOST=127.0.0.1
 
-
 4 - Instalar las dependencias necesarias:
 
     npm install
@@ -52,6 +51,7 @@ Por ejemplo:
 |        |                                | `{"concept": "others", "amount": 98.3, "_type": "expense"}`                                                             |
 | PUT    | /api/operations/id             | Actualiza una operación existente que coincida con el parametro id. Se espera recibir un JSON con los siguientes datos: |
 |        |                                | `{"concept": "others", "amount": 98.3}`                                                                                 |
+| DELETE | /api/operations/id             | Elimina una operación existente que coincida con el parametro id.                                                       |
 
 Conceptos válidos de operaciones:
 

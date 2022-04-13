@@ -8,7 +8,7 @@ const {
   objSchema = require('../helpers/validations');
 
 module.exports = {
-  /*  paramValidation: async (req, res, next) => {
+  /* getByParamValidation: async (req, res, next) => {
     let param = req.params.param;
     if (validId(param)) {
       req.options = { where: { id: param } };
@@ -22,7 +22,6 @@ module.exports = {
       req.options = { where: { _type: param } };
       return next();
     }
-
   }, */
 
   createValidation: async (req, res, next) => {
@@ -44,7 +43,7 @@ module.exports = {
 
   updateValidation: async (req, res, next) => {
     let param = req.params.id;
-    if (!validId(param)) {
+    if (!(await validId(param))) {
       const error = new Error('Not found');
       error.status = 404;
       next(error);
@@ -57,8 +56,19 @@ module.exports = {
         validAmount(req.body.amount)
       )
     ) {
-      const error = new Error('Bad Request');
-      error.status = 400;
+      const error = new Error('Not Found');
+      error.status = 404;
+      next(error);
+    } else {
+      next();
+    }
+  },
+
+  deleteValidation: async (req, res, next) => {
+    let param = req.params.id;
+    if (!(await validId(param))) {
+      const error = new Error('Not found');
+      error.status = 404;
       next(error);
     } else {
       next();

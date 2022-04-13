@@ -43,4 +43,9 @@ module.exports = {
     let response = await db.Operation.create(data);
     return response;
   },
+
+  delete: async (id) => {
+    let response = await db.Operation.destroy({ where: { id } });
+    return response;
+  },
 };
