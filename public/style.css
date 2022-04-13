@@ -1,0 +1,36 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+h1 {
+  text-align: center;
+}
+table {
+  width: 90vw;
+  border-collapse: collapse;
+}
+table th,
+table td {
+  padding: 0.5em;
+  border: thin solid black;
+}
+table ul {
+  margin: 0;
+}
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+nav li {
+  padding: 0.5em;
+}
+.index {
+  display: block;
+  text-align: center;
+}

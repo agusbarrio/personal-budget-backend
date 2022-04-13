@@ -55,7 +55,7 @@ operationService = {
 
   validAmount: (value) => {
     let n = Number(value);
-    if (!Number.isNaN(n) && n >= 0) {
+    if (!Number.isNaN(n) && n > 0) {
       return true;
     } else {
       return false;

@@ -12,8 +12,9 @@ app.set('json spaces', 2);
 
 //middlewares
 app.use(morgan('dev'));
-//app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(express.static('public'));
 
 //routes
 app.use(require('./routes/index.js'));
