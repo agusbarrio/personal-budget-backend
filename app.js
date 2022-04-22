@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
+const cors = require('cors');
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('json spaces', 2);
 
 //middlewares
+app.use(cors({ origin: process.env.CORS_ORIGIN || false }));
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

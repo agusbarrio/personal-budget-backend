@@ -15,13 +15,14 @@ Abrir Git Bash en la carpeta donde se desea guardar el proyecto y ejecutar:
 
     $ git clone https://github.com/agusbarrio/personal-budget-backend.git
 
-3 - Cambiar el nombre del archivo example.env a .env. Modificar el contenido del archivo con los datos correspondientes de su usuario local de MySQL.
+3 - Cambiar el nombre del archivo example.env a .env. Modificar el contenido del archivo con los datos correspondientes de su usuario local de MySQL y la URL del cliente que consumirá la API en CORS_ORIGIN.
 Por ejemplo:
 
       DB_NAME=db-name
       DB_USER=root
       DB_PASSWORD=
       DB_HOST=127.0.0.1
+      CORS_ORIGIN=http://127.0.0.1:5500
 
 4 - Instalar las dependencias necesarias:
 
