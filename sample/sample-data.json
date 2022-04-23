@@ -1,68 +1,662 @@
 [
-  { "concept": "entertainment", "amount": 50.43, "_type": "expense" },
-  { "concept": "entertainment", "amount": 53.43, "_type": "income" },
-  { "concept": "supermarket", "amount": 5234.43, "_type": "expense" },
-  { "concept": "supermarket", "amount": 353.43, "_type": "income" },
-  { "concept": "clothing", "amount": 1253.43, "_type": "expense" },
-  { "concept": "clothing", "amount": 2353.43, "_type": "expense" },
-  { "concept": "services", "amount": 5153.43, "_type": "income" },
-  { "concept": "services", "amount": 253.43, "_type": "expense" },
-  { "concept": "travels", "amount": 353.43, "_type": "income" },
-  { "concept": "travels", "amount": 7653.43, "_type": "expense" },
-  { "concept": "others", "amount": 353.43, "_type": "expense" },
-  { "concept": "others", "amount": 96.43, "_type": "income" },
-  { "concept": "transport", "amount": 953.43, "_type": "income" },
-  { "concept": "transport", "amount": 4353.43, "_type": "expense" },
-  { "concept": "technology", "amount": 253.43, "_type": "income" },
-  { "concept": "technology", "amount": 533.43, "_type": "expense" },
-  { "concept": "subscriptions", "amount": 533.43, "_type": "income" },
-  { "concept": "subscriptions", "amount": 523.43, "_type": "expense" },
-  { "concept": "home", "amount": 523.43, "_type": "income" },
-  { "concept": "home", "amount": 53.43, "_type": "income" },
-  { "concept": "job", "amount": 5643.43, "_type": "expense" },
-  { "concept": "job", "amount": 8888.43, "_type": "income" },
-  { "concept": "entertainment", "amount": 50.43, "_type": "expense" },
-  { "concept": "entertainment", "amount": 53.43, "_type": "income" },
-  { "concept": "supermarket", "amount": 5234.43, "_type": "expense" },
-  { "concept": "supermarket", "amount": 353.43, "_type": "income" },
-  { "concept": "clothing", "amount": 1253.43, "_type": "expense" },
-  { "concept": "clothing", "amount": 2353.43, "_type": "expense" },
-  { "concept": "services", "amount": 5153.43, "_type": "income" },
-  { "concept": "services", "amount": 253.43, "_type": "expense" },
-  { "concept": "travels", "amount": 353.43, "_type": "income" },
-  { "concept": "travels", "amount": 7653.43, "_type": "expense" },
-  { "concept": "others", "amount": 353.43, "_type": "expense" },
-  { "concept": "others", "amount": 96.43, "_type": "income" },
-  { "concept": "transport", "amount": 953.43, "_type": "income" },
-  { "concept": "transport", "amount": 4353.43, "_type": "expense" },
-  { "concept": "technology", "amount": 253.43, "_type": "income" },
-  { "concept": "technology", "amount": 533.43, "_type": "expense" },
-  { "concept": "subscriptions", "amount": 533.43, "_type": "income" },
-  { "concept": "subscriptions", "amount": 523.43, "_type": "expense" },
-  { "concept": "home", "amount": 523.43, "_type": "income" },
-  { "concept": "home", "amount": 53.43, "_type": "income" },
-  { "concept": "job", "amount": 5643.43, "_type": "expense" },
-  { "concept": "job", "amount": 8888.43, "_type": "income" },
-  { "concept": "entertainment", "amount": 50.43, "_type": "expense" },
-  { "concept": "entertainment", "amount": 53.43, "_type": "income" },
-  { "concept": "supermarket", "amount": 5234.43, "_type": "expense" },
-  { "concept": "supermarket", "amount": 353.43, "_type": "income" },
-  { "concept": "clothing", "amount": 1253.43, "_type": "expense" },
-  { "concept": "clothing", "amount": 2353.43, "_type": "expense" },
-  { "concept": "services", "amount": 5153.43, "_type": "income" },
-  { "concept": "services", "amount": 253.43, "_type": "expense" },
-  { "concept": "travels", "amount": 353.43, "_type": "income" },
-  { "concept": "travels", "amount": 7653.43, "_type": "expense" },
-  { "concept": "others", "amount": 353.43, "_type": "expense" },
-  { "concept": "others", "amount": 96.43, "_type": "income" },
-  { "concept": "transport", "amount": 953.43, "_type": "income" },
-  { "concept": "transport", "amount": 4353.43, "_type": "expense" },
-  { "concept": "technology", "amount": 253.43, "_type": "income" },
-  { "concept": "technology", "amount": 533.43, "_type": "expense" },
-  { "concept": "subscriptions", "amount": 533.43, "_type": "income" },
-  { "concept": "subscriptions", "amount": 523.43, "_type": "expense" },
-  { "concept": "home", "amount": 523.43, "_type": "income" },
-  { "concept": "home", "amount": 53.43, "_type": "income" },
-  { "concept": "job", "amount": 5643.43, "_type": "expense" },
-  { "concept": "job", "amount": 8888.43, "_type": "income" }
+  {
+    "concept": "entertainment",
+    "amount": 50.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "entertainment",
+    "amount": 53.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "supermarket",
+    "amount": 5234.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "supermarket",
+    "amount": 353.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "clothing",
+    "amount": 1253.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "clothing",
+    "amount": 2353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "services",
+    "amount": 5153.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "services",
+    "amount": 253.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "travels",
+    "amount": 353.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "travels",
+    "amount": 7653.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "others",
+    "amount": 353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "others",
+    "amount": 96.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "transport",
+    "amount": 953.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "transport",
+    "amount": 4353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "technology",
+    "amount": 253.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "technology",
+    "amount": 533.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "subscriptions",
+    "amount": 533.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "subscriptions",
+    "amount": 523.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "home",
+    "amount": 523.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "home",
+    "amount": 53.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "job",
+    "amount": 5643.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "job",
+    "amount": 8888.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "entertainment",
+    "amount": 50.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "entertainment",
+    "amount": 53.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "supermarket",
+    "amount": 5234.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "supermarket",
+    "amount": 353.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "clothing",
+    "amount": 1253.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "clothing",
+    "amount": 2353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "services",
+    "amount": 5153.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "services",
+    "amount": 253.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "travels",
+    "amount": 353.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "travels",
+    "amount": 7653.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "others",
+    "amount": 353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "others",
+    "amount": 96.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "transport",
+    "amount": 953.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "transport",
+    "amount": 4353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "technology",
+    "amount": 253.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "technology",
+    "amount": 533.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "subscriptions",
+    "amount": 533.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "subscriptions",
+    "amount": 523.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "home",
+    "amount": 523.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "home",
+    "amount": 53.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "job",
+    "amount": 5643.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "job",
+    "amount": 8888.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "entertainment",
+    "amount": 50.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "entertainment",
+    "amount": 53.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "supermarket",
+    "amount": 5234.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "supermarket",
+    "amount": 353.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "clothing",
+    "amount": 1253.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "clothing",
+    "amount": 2353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "services",
+    "amount": 5153.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "services",
+    "amount": 253.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "travels",
+    "amount": 353.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "travels",
+    "amount": 7653.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "others",
+    "amount": 353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "others",
+    "amount": 96.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "transport",
+    "amount": 953.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "transport",
+    "amount": 4353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "technology",
+    "amount": 253.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "technology",
+    "amount": 533.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "subscriptions",
+    "amount": 533.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "subscriptions",
+    "amount": 523.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "home",
+    "amount": 523.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "home",
+    "amount": 53.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "job",
+    "amount": 5643.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "job",
+    "amount": 8888.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "entertainment",
+    "amount": 50.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "entertainment",
+    "amount": 53.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "supermarket",
+    "amount": 5234.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "supermarket",
+    "amount": 353.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "clothing",
+    "amount": 1253.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "clothing",
+    "amount": 2353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "services",
+    "amount": 5153.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "services",
+    "amount": 253.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "travels",
+    "amount": 353.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "travels",
+    "amount": 7653.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "others",
+    "amount": 353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "others",
+    "amount": 96.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "transport",
+    "amount": 953.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "transport",
+    "amount": 4353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "technology",
+    "amount": 253.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "technology",
+    "amount": 533.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "subscriptions",
+    "amount": 533.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "subscriptions",
+    "amount": 523.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "home",
+    "amount": 523.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "home",
+    "amount": 53.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "job",
+    "amount": 5643.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "job",
+    "amount": 8888.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "entertainment",
+    "amount": 50.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "entertainment",
+    "amount": 53.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "supermarket",
+    "amount": 5234.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "supermarket",
+    "amount": 353.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "clothing",
+    "amount": 1253.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "clothing",
+    "amount": 2353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "services",
+    "amount": 5153.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "services",
+    "amount": 253.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "travels",
+    "amount": 353.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "travels",
+    "amount": 7653.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "others",
+    "amount": 353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "others",
+    "amount": 96.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "transport",
+    "amount": 953.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "transport",
+    "amount": 4353.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "technology",
+    "amount": 253.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "technology",
+    "amount": 533.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "subscriptions",
+    "amount": 533.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "subscriptions",
+    "amount": 523.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "home",
+    "amount": 523.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "home",
+    "amount": 53.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "job",
+    "amount": 5643.43,
+    "_type": "expense",
+    "_date": "2020-3-6"
+  },
+  {
+    "concept": "job",
+    "amount": 8888.43,
+    "_type": "income",
+    "_date": "2020-3-6"
+  }
 ]

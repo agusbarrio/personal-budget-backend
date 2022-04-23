@@ -4,6 +4,7 @@ const {
     validConcept,
     validType,
     validAmount,
+    validDate,
   } = require('../services/operations'),
   objSchema = require('../helpers/validations');
 
@@ -30,7 +31,8 @@ module.exports = {
         objSchema(req.body, config.createFields) &&
         validConcept(req.body.concept) &&
         validAmount(req.body.amount) &&
-        validType(req.body._type)
+        validType(req.body._type) &&
+        validDate(req.body._date)
       )
     ) {
       const error = new Error('Bad Request');
@@ -53,11 +55,12 @@ module.exports = {
       !(
         objSchema(req.body, config.updateFields) &&
         validConcept(req.body.concept) &&
-        validAmount(req.body.amount)
+        validAmount(req.body.amount) &&
+        validDate(req.body._date)
       )
     ) {
-      const error = new Error('Not Found');
-      error.status = 404;
+      const error = new Error('Bad request');
+      error.status = 400;
       next(error);
     } else {
       next();

@@ -18,8 +18,8 @@ operationService = {
       'job',
     ],
     types: ['expense', 'income'],
-    updateFields: ['concept', 'amount'],
-    createFields: ['concept', 'amount', '_type'],
+    updateFields: ['concept', 'amount', '_date'],
+    createFields: ['concept', 'amount', '_type', '_date'],
   },
 
   getAll: async (limit, offset) => {
@@ -67,6 +67,13 @@ operationService = {
     }
   },
 
+  validDate: (value) => {
+    const regExpDate = /^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/;
+
+    return regExpDate.test(value) && Date.parse(value) <= Date.now()
+      ? true
+      : false;
+  },
   getByParam: async (param, limit, offset) => {
     const error = new Error('Not found');
     error.status = 404;

@@ -5,7 +5,6 @@ const Sequelize = require('sequelize'),
 sequelize = new Sequelize(config.database, config.username, config.password, {
   host: config.host,
   logging: config.logging,
-  timezone: config.timezone,
   dialect: config.dialect,
 });
 

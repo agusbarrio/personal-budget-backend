@@ -1,7 +1,5 @@
 'use strict';
 
-const sampleData = require('../sample/sample-data');
-
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert(

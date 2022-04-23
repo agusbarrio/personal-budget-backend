@@ -50,9 +50,9 @@ Por ejemplo:
 | GET    | /api/operations/type           | Recupera todas las operaciones que coincidan con el type correspondiente (income - expense)                             |
 | GET    | /api/operations/type?page=n    | Recupera 10 operaciones que coincidan con el type correspondiente (income - expense)                                    |
 | POST   | /api/operations                | Agrega una operación. Se espera recibir un JSON con los siguientes datos:                                               |
-|        |                                | `{"concept": "others", "amount": 98.3, "_type": "expense"}`                                                             |
+|        |                                | `{"concept": "others", "amount": 98.3, "_type": "expense", "_date": "2020-03-03"}`                                      |
 | PUT    | /api/operations/id             | Actualiza una operación existente que coincida con el parametro id. Se espera recibir un JSON con los siguientes datos: |
-|        |                                | `{"concept": "others", "amount": 98.3}`                                                                                 |
+|        |                                | `{"concept": "others", "amount": 98.3} "_date": "2070-08-16"}`                                                          |
 | DELETE | /api/operations/id             | Elimina una operación existente que coincida con el parametro id.                                                       |
 
 Conceptos válidos de operaciones:

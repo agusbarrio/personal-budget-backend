@@ -43,13 +43,11 @@ block content
             li 'income'
             li 'expense'
       tr
-        td createdAt
+        td _date
         td Date
-      tr
-        td updatedAt
-        td Date
+        td AAAA-MM-DD
 
-  p Los atributos id, createdAt y updatedAt se generan automaticamente por lo que no necesitan ser manipulados.
+  p El atributo id, se genera automaticamente.
 
   h2 Endpoints
   table
@@ -91,12 +89,12 @@ block content
         td POST
         td /api/operations
         td Agrega una operación. Se espera recibir un JSON que contenga los atributos 
-          mark concept, amount y _type.
+          mark concept, amount, _type y _date
       tr
         td PUT
         td /api/operations/id
         td Actualiza una operación existente que coincida con el parametro id. Se espera recibir un JSON que contenga los atributos 
-          mark concept y amount.
+          mark concept amount y _date
       tr
         td DELETE
         td /api/operations/id

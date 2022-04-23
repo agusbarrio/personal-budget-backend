@@ -17,10 +17,12 @@ module.exports = (sequelize, DataTypes) => {
       concept: DataTypes.STRING,
       amount: DataTypes.FLOAT,
       _type: DataTypes.STRING,
+      _date: DataTypes.DATEONLY,
     },
     {
       sequelize,
       modelName: 'Operation',
+      timestamps: false,
     }
   );
   return Operation;

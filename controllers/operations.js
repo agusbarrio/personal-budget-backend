@@ -38,7 +38,6 @@ module.exports = {
       const response = await operationService.update(req.params.id, req.body);
       res.send('Actualizado correctamente');
     } catch (error) {
-      console.log(error.stack);
       next(error);
     }
   },

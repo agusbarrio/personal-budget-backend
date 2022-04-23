@@ -8,7 +8,7 @@ const db = {
   dialect: 'mysql',
   host: process.env.DB_HOST,
   logging: false,
-  timezone: '+03:00',
+  /*  timezone: '+03:00', */
 };
 
 module.exports = db;
