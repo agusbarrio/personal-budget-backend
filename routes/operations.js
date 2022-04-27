@@ -8,6 +8,9 @@ const paginationMiddleware = require('../middlewares/pagination');
 
 router.get('/', paginationMiddleware('operations'), operationController.getAll);
 
+//Get count
+router.get('/count', operationController.getCount);
+
 //Get operations by id, concept or type
 router.get(
   '/:param',

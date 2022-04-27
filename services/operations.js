@@ -27,8 +27,8 @@ operationService = {
     return response;
   },
 
-  getCount: async (options) => {
-    let count = await operationsRepository.getCount(options);
+  getCount: async () => {
+    let count = await operationsRepository.getCount();
     return count;
   },
 

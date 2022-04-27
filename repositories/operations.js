@@ -6,8 +6,8 @@ module.exports = {
     return response;
   },
 
-  getCount: async (options) => {
-    let response = await db.Operation.count(options);
+  getCount: async () => {
+    let response = await db.Operation.count();
     return response;
   },
 

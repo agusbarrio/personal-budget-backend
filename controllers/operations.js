@@ -11,6 +11,15 @@ module.exports = {
     }
   },
 
+  getCount: async (req, res, next) => {
+    try {
+      const response = await operationService.getCount();
+      res.json(response);
+    } catch (error) {
+      next(error);
+    }
+  },
+
   getByParam: async (req, res, next) => {
     try {
       const response = await operationService.getByParam(

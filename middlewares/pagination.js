@@ -7,7 +7,7 @@ module.exports = (entityName) => {
       next();
     } else {
       let page = Number(req.query.page);
-      let maxCount = await getCount(req.options);
+      let maxCount = await getCount();
       let lastPage = Math.ceil(maxCount / config.pageSize);
 
       try {

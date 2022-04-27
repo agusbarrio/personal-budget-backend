@@ -44,6 +44,7 @@ Por ejemplo:
 | ------ | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
 | GET    | /api/operations                | Recupera todas las operaciones                                                                                          |
 | GET    | /api/operations?page=n         | Recupera las 10 operaciones indicadas por el parámetro n >= 1 siendo n=1 los primeros 10 registros                      |
+| GET    | /api/operations/count          | Recupera la cantidad de operaciones                                                                                     |
 | GET    | /api/operations/id             | Recupera la operación con el id correspondiente siendo el parámetro id >= 1                                             |
 | GET    | /api/operations/concept        | Recupera todas las operaciones que coincidan con el parámetro concept correspondiente                                   |
 | GET    | /api/operations/concept?page=n | Recupera 10 operaciones que coincidan con el parametro concept correspondiente                                          |
