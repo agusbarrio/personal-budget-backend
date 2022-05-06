@@ -37,6 +37,11 @@ operationService = {
     return count;
   },
 
+  getIncomesCount: async () => {
+    let count = await operationsRepository.getIncomesCount();
+    return count;
+  },
+
   validId: async (value) => {
     let n = Number(value);
     if (Number.isInteger(n) && n > 0) {

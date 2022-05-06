@@ -28,6 +28,16 @@ module.exports = {
       next(error);
     }
   },
+
+  getIncomesCount: async (req, res, next) => {
+    try {
+      const response = await operationService.getIncomesCount();
+      res.json(response);
+    } catch (error) {
+      next(error);
+    }
+  },
+
   getByParam: async (req, res, next) => {
     try {
       const response = await operationService.getByParam(
