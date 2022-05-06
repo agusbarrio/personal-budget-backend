@@ -1,13 +1,23 @@
 //entityName must be plural and lowercase. example: "operations", "users"
 module.exports = (entityName) => {
-  const { getCount, config } = require(`../services/${entityName}`);
+  const {
+    getCount,
+    getExpensesCount,
+    getIncomesCount,
+    config,
+  } = require(`../services/${entityName}`);
 
   const middleware = async (req, res, next) => {
     if (req.query.page === undefined) {
       next();
     } else {
       let page = Number(req.query.page);
-      let maxCount = await getCount();
+      console.log(req.params.param);
+      let maxCount;
+      if (!req.params.param) maxCount = await getCount();
+      if (req.params.param === 'expense') maxCount = await getExpensesCount();
+      if (req.params.param === 'income') maxCount = await getIncomesCount();
+
       let lastPage = Math.ceil(maxCount / config.pageSize);
 
       try {
