@@ -11,6 +11,11 @@ module.exports = {
     return response;
   },
 
+  getExpensesCount: async () => {
+    let response = await db.Operation.count({ where: { _type: 'expense' } });
+    return response;
+  },
+
   getById: async (id) => {
     let response = await db.Operation.findByPk(id);
     return response;

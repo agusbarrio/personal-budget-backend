@@ -32,6 +32,11 @@ operationService = {
     return count;
   },
 
+  getExpensesCount: async () => {
+    let count = await operationsRepository.getExpensesCount();
+    return count;
+  },
+
   validId: async (value) => {
     let n = Number(value);
     if (Number.isInteger(n) && n > 0) {
