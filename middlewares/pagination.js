@@ -1,24 +1,30 @@
 //entityName must be plural and lowercase. example: "operations", "users"
+
+const operation = require('../models/operation');
+
 module.exports = (entityName) => {
-  const {
-    getCount,
-    getExpensesCount,
-    getIncomesCount,
-    config,
-  } = require(`../services/${entityName}`);
+  const operationService = require(`../services/${entityName}`);
 
   const middleware = async (req, res, next) => {
     if (req.query.page === undefined) {
       next();
     } else {
       let page = Number(req.query.page);
-      console.log(req.params.param);
-      let maxCount;
-      if (!req.params.param) maxCount = await getCount();
-      if (req.params.param === 'expense') maxCount = await getExpensesCount();
-      if (req.params.param === 'income') maxCount = await getIncomesCount();
 
-      let lastPage = Math.ceil(maxCount / config.pageSize);
+      let maxCount;
+      if (!req.params.param) {
+        maxCount = await operationService.getCount();
+      } else {
+        if (operationService.validId(req.params.param)) {
+          return next();
+        }
+        if (operationService.validType(req.params.param))
+          maxCount = await operationService.getTypeCount(req.params.param);
+        if (operationService.validConcept(req.params.param))
+          maxCount = await operationService.getConceptCount(req.params.param);
+      }
+
+      let lastPage = Math.ceil(maxCount / operationService.config.pageSize);
 
       try {
         if (!Number.isInteger(page)) {
@@ -32,8 +38,8 @@ module.exports = (entityName) => {
           error.status = 400;
           throw error;
         }
-        req.limit = config.pageSize;
-        req.offset = (page - 1) * config.pageSize;
+        req.limit = operationService.config.pageSize;
+        req.offset = (page - 1) * operationService.config.pageSize;
         next();
       } catch (error) {
         next(error);

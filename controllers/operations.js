@@ -20,18 +20,9 @@ module.exports = {
     }
   },
 
-  getExpensesCount: async (req, res, next) => {
+  getCountByParam: async (req, res, next) => {
     try {
-      const response = await operationService.getExpensesCount();
-      res.json(response);
-    } catch (error) {
-      next(error);
-    }
-  },
-
-  getIncomesCount: async (req, res, next) => {
-    try {
-      const response = await operationService.getIncomesCount();
+      const response = await operationService.getCountByParam(req.params.param);
       res.json(response);
     } catch (error) {
       next(error);

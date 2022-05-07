@@ -11,13 +11,13 @@ module.exports = {
     return response;
   },
 
-  getExpensesCount: async () => {
-    let response = await db.Operation.count({ where: { _type: 'expense' } });
+  getTypeCount: async (_type) => {
+    let response = await db.Operation.count({ where: { _type } });
     return response;
   },
 
-  getIncomesCount: async () => {
-    let response = await db.Operation.count({ where: { _type: 'income' } });
+  getConceptCount: async (concept) => {
+    let response = await db.Operation.count({ where: { concept } });
     return response;
   },
 
