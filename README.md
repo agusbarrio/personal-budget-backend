@@ -47,8 +47,10 @@ Por ejemplo:
 | GET    | /api/operations/count          | Recupera la cantidad de operaciones                                                                                     |
 | GET    | /api/operations/id             | Recupera la operación con el id correspondiente siendo el parámetro id >= 1                                             |
 | GET    | /api/operations/concept        | Recupera todas las operaciones que coincidan con el parámetro concept correspondiente                                   |
+| GET    | /api/operations/concept/count  | Recupera la cantidad de operaciones que coincidan con el parámetro concept correspondiente                              |
 | GET    | /api/operations/concept?page=n | Recupera 10 operaciones que coincidan con el parametro concept correspondiente                                          |
 | GET    | /api/operations/type           | Recupera todas las operaciones que coincidan con el type correspondiente (income - expense)                             |
+| GET    | /api/operations/type/count     | Recupera la cantidad de operaciones que coincidan con el type correspondiente (income - expense)                        |
 | GET    | /api/operations/type?page=n    | Recupera 10 operaciones que coincidan con el type correspondiente (income - expense)                                    |
 | POST   | /api/operations                | Agrega una operación. Se espera recibir un JSON con los siguientes datos:                                               |
 |        |                                | `{"concept": "others", "amount": 98.3, "_type": "expense", "_date": "2020-03-03"}`                                      |
