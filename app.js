@@ -3,8 +3,11 @@ const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const cors = require('cors');
-
 const app = express();
+
+//Swagger
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./views/swagger.json');
 
 // settings
 app.set('port', process.env.PORT || 3000);
@@ -18,11 +21,12 @@ app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static('public'));
+app.use('/api', swaggerUi.serve);
 
 //routes
 app.use(require('./routes/index.js'));
+app.get('/api', swaggerUi.setup(swaggerDocument));
 app.use('/api/operations', require('./routes/operations.js'));
-
 //error 404
 app.use(function (req, res, next) {
   const error = new Error('Not found');

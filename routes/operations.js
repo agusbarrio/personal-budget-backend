@@ -10,16 +10,7 @@ router.get('/', paginationMiddleware('operations'), operationController.getAll);
 
 //Get count
 router.get('/count', operationController.getCount);
-/* 
-//Get expenses count
-router.get('/count-expenses', operationController.getExpensesCount);
 
-//Get incomes count
-router.get('/count-incomes', operationController.getIncomesCount);
-
-//Get concept count
-router.get('/c:concept', operationController.getConceptCount);
- */
 //Get operations by id, concept or type
 router.get(
   '/:param',
@@ -44,6 +35,7 @@ router.put(
   operationController.update
 );
 
+//Delete one operation
 router.delete(
   '/:id',
   operationMiddleware.deleteValidation,

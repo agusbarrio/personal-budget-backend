@@ -2,7 +2,8 @@
 
 API REST que permite administrar un presupuesto personal mediante operaciones.
 
-Puede ver el despliegue de la API en https://mi-presupuesto-personal.herokuapp.com/
+Puede ver el despliegue de la API en https://mi-presupuesto-personal.herokuapp.com/  
+También puede probar cada uno de sus endpoints mediante una interfaz visual en https://mi-presupuesto-personal.herokuapp.com/api/
 
 Puede interactuar con la API mediante el frontend desplegado en https://agusbarrio.github.io/personal-budget-frontend/
 

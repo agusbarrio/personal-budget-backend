@@ -1,0 +1,350 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Presupuesto personal",
+    "description": "API REST que permite administrar un presupuesto personal creando, modificando y consultando tus operaciones.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/operations": {
+      "get": {
+        "tags": ["operation"],
+        "summary": "Obtiene todas las operaciones",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/page"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operación exitosa",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Operation"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Parámetro inválido"
+          }
+        }
+      },
+      "post": {
+        "tags": ["operation"],
+        "summary": "Crea una operación",
+        "requestBody": { "$ref": "#/components/requestBodies/createOperation" },
+        "responses": {
+          "200": {
+            "description": "Creado correctamente"
+          },
+          "400": {
+            "description": "Argumentos incorrectos"
+          }
+        }
+      }
+    },
+
+    "/api/operations/count": {
+      "get": {
+        "tags": ["operation"],
+        "summary": "Obtiene la cantidad de operaciones",
+        "responses": {
+          "200": { "$ref": "#/components/responses/count" }
+        }
+      }
+    },
+
+    "/api/operations/{id}": {
+      "get": {
+        "tags": ["operation"],
+        "summary": "Obtiene una operación según el ID correspondiente",
+        "parameters": [{ "$ref": "#/components/parameters/id" }],
+        "responses": {
+          "200": {
+            "description": "Operación encontrada",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Operation" }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/notFount"
+          }
+        }
+      },
+      "put": {
+        "tags": ["operation"],
+        "summary": "Actualiza una operación",
+        "parameters": [{ "$ref": "#/components/parameters/id" }],
+        "responses": {
+          "200": {
+            "description": "Actualizado correctamente"
+          },
+          "404": {
+            "$ref": "#/components/responses/notFount"
+          }
+        }
+      },
+      "delete": {
+        "tags": ["operation"],
+        "summary": "Elimina una operación",
+        "parameters": [{ "$ref": "#/components/parameters/id" }],
+        "responses": {
+          "200": {
+            "description": "Eliminado correctamente"
+          },
+          "404": {
+            "$ref": "#/components/responses/notFount"
+          }
+        }
+      }
+    },
+    "/api/operations/{concept}": {
+      "get": {
+        "tags": ["operation"],
+        "summary": "Obtiene las operaciones según el concepto correspondiente",
+        "parameters": [
+          { "$ref": "#/components/parameters/concept" },
+          { "$ref": "#/components/parameters/page" }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operación encontrada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Operation"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/notFount"
+          }
+        }
+      }
+    },
+    "/api/operations/{concept}/count": {
+      "get": {
+        "tags": ["operation"],
+        "summary": "Obtiene la cantidad de operaciones del concepto elegido",
+        "parameters": [{ "$ref": "#/components/parameters/concept" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/count" },
+          "404": {
+            "$ref": "#/components/responses/notFount"
+          }
+        }
+      }
+    },
+    "/api/operations/{type}": {
+      "get": {
+        "tags": ["operation"],
+        "summary": "Obtiene las operaciones según el tipo correspondiente",
+        "parameters": [
+          { "$ref": "#/components/parameters/_type" },
+          { "$ref": "#/components/parameters/page" }
+        ],
+        "responses": {
+          "200": {
+            "description": "Operación encontrada",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Operation"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/notFount"
+          }
+        }
+      }
+    },
+    "/api/operations/{type}/count": {
+      "get": {
+        "tags": ["operation"],
+        "summary": "Obtiene la cantidad de operaciones del tipo elegido",
+        "parameters": [{ "$ref": "#/components/parameters/_type" }],
+        "responses": {
+          "200": { "$ref": "#/components/responses/count" },
+          "404": {
+            "$ref": "#/components/responses/notFount"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Operation": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 14
+          },
+          "concept": {
+            "type": "string",
+            "enum": [
+              "entertainment",
+              "supermarket",
+              "clothing",
+              "services",
+              "travels",
+              "others",
+              "transport",
+              "technology",
+              "subscriptions",
+              "home",
+              "job"
+            ],
+            "example": "services"
+          },
+          "amount": {
+            "type": "number",
+            "format": "float",
+            "exclusiveMinimum": 0,
+            "example": 250.25
+          },
+          "_type": {
+            "type": "string",
+            "enum": ["income", "expense"],
+            "example": "expense"
+          },
+          "_date": {
+            "type": "string",
+            "format": "date",
+            "example": "2022-05-20"
+          }
+        }
+      }
+    },
+    "requestBodies": {
+      "createOperation": {
+        "required": true,
+        "description": "Campos requeridos para crear operación",
+        "content": {
+          "aplication/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "concept": {
+                  "$ref": "#/components/schemas/Operation/properties/concept"
+                },
+                "amount": {
+                  "$ref": "#/components/schemas/Operation/properties/amount"
+                },
+                "_type": {
+                  "$ref": "#/components/schemas/Operation/properties/_type"
+                },
+                "_date": {
+                  "$ref": "#/components/schemas/Operation/properties/_date"
+                }
+              }
+            },
+            "example": {
+              "concept": "technology",
+              "amount": 214.54,
+              "_type": "expense",
+              "_date": "2015-04-21"
+            }
+          }
+        }
+      },
+      "updateOperation": {
+        "required": true,
+        "description": "Campos requeridos para actualizar operación",
+        "content": {
+          "schema": {
+            "type": "object",
+            "properties": {
+              "concept": {
+                "$ref": "#/components/schemas/Operation/properties/concept"
+              },
+              "amount": {
+                "$ref": "#/components/schemas/Operation/properties/amount"
+              },
+              "_date": {
+                "$ref": "#/components/schemas/Operation/properties/_date"
+              }
+            }
+          },
+          "example": {
+            "concept": "technology",
+            "amount": 214.54,
+            "_date": "2015-04-21"
+          }
+        }
+      }
+    },
+    "responses": {
+      "count": {
+        "description": "Cantidad de operaciones",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "integer"
+            },
+            "example": 115
+          }
+        }
+      },
+      "notFount": {
+        "description": "No encontrado"
+      }
+    },
+    "parameters": {
+      "page": {
+        "name": "page",
+        "in": "query",
+        "summary": "Hola",
+        "description": "Número de página. Cada página contiene 10 registros y la primera página es 1",
+        "schema": {
+          "type": "integer"
+        },
+        "example": 1
+      },
+      "id": {
+        "required": true,
+        "name": "id",
+        "in": "path",
+        "description": "ID de la operación",
+        "schema": {
+          "$ref": "#/components/schemas/Operation/properties/id"
+        }
+      },
+      "concept": {
+        "required": true,
+        "name": "concept",
+        "in": "path",
+        "description": "concepto de la operación",
+        "schema": {
+          "$ref": "#/components/schemas/Operation/properties/concept"
+        }
+      },
+      "_type": {
+        "required": true,
+        "name": "_type",
+        "in": "path",
+        "description": "tipo de operación",
+        "schema": {
+          "$ref": "#/components/schemas/Operation/properties/_type"
+        }
+      }
+    }
+  }
+}
