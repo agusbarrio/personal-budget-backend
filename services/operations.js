@@ -31,16 +31,6 @@ operationService = {
     let count = await operationsRepository.getCount();
     return count;
   },
-  /* 
-  getExpensesCount: async () => {
-    let count = await operationsRepository.getExpensesCount();
-    return count;
-  },
-
-  getIncomesCount: async () => {
-    let count = await operationsRepository.getIncomesCount();
-    return count;
-  }, */
 
   getTypeCount: async (_type) => {
     let count = await operationsRepository.getTypeCount(_type);
@@ -69,12 +59,6 @@ operationService = {
   validId: (value) => {
     let n = Number(value);
     if (Number.isInteger(n) && n > 0) {
-      /*  const response = await operationsRepository.getById(value);
-      if (response === null) {
-        return false;
-      } else {
-        return response;
-      } */
       return true;
     } else {
       return false;
@@ -112,11 +96,7 @@ operationService = {
   getByParam: async (param, limit, offset) => {
     const error = new Error('Not found');
     error.status = 404;
-    /*  let auxResponse = await operationService.validId(param);
-    if (auxResponse) {
-      let response = auxResponse;
-      return response;
-    } */
+
     if (operationService.validId(param)) {
       let response = await operationsRepository.getById(param);
       if (response) return response;

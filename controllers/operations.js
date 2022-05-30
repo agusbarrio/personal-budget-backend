@@ -1,4 +1,3 @@
-const operations = require('../middlewares/operations.js');
 const operationService = require('../services/operations.js');
 
 module.exports = {

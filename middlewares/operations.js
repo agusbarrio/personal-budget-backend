@@ -9,21 +9,6 @@ const {
   objSchema = require('../helpers/validations');
 
 module.exports = {
-  /* getByParamValidation: async (req, res, next) => {
-    let param = req.params.param;
-    if (validId(param)) {
-      req.options = { where: { id: param } };
-      return next();
-    }
-    if (validConcept(param)) {
-      req.options = { where: { concept: param } };
-      return next();
-    }
-    if (validType(param)) {
-      req.options = { where: { _type: param } };
-      return next();
-    }
-  }, */
 
   createValidation: async (req, res, next) => {
     if (
