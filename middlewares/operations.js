@@ -9,7 +9,6 @@ const {
   objSchema = require('../helpers/validations');
 
 module.exports = {
-
   createValidation: async (req, res, next) => {
     if (
       !(

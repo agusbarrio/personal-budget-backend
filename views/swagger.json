@@ -82,6 +82,7 @@
         "tags": ["operation"],
         "summary": "Actualiza una operación",
         "parameters": [{ "$ref": "#/components/parameters/id" }],
+        "requestBody": { "$ref": "#/components/requestBodies/updateOperation" },
         "responses": {
           "200": {
             "description": "Actualizado correctamente"
@@ -238,7 +239,7 @@
         "required": true,
         "description": "Campos requeridos para crear operación",
         "content": {
-          "aplication/json": {
+          "application/json": {
             "schema": {
               "type": "object",
               "properties": {
@@ -269,24 +270,26 @@
         "required": true,
         "description": "Campos requeridos para actualizar operación",
         "content": {
-          "schema": {
-            "type": "object",
-            "properties": {
-              "concept": {
-                "$ref": "#/components/schemas/Operation/properties/concept"
-              },
-              "amount": {
-                "$ref": "#/components/schemas/Operation/properties/amount"
-              },
-              "_date": {
-                "$ref": "#/components/schemas/Operation/properties/_date"
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "concept": {
+                  "$ref": "#/components/schemas/Operation/properties/concept"
+                },
+                "amount": {
+                  "$ref": "#/components/schemas/Operation/properties/amount"
+                },
+                "_date": {
+                  "$ref": "#/components/schemas/Operation/properties/_date"
+                }
               }
+            },
+            "example": {
+              "concept": "technology",
+              "amount": 214.54,
+              "_date": "2015-04-21"
             }
-          },
-          "example": {
-            "concept": "technology",
-            "amount": 214.54,
-            "_date": "2015-04-21"
           }
         }
       }

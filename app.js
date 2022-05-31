@@ -27,6 +27,7 @@ app.use('/api', swaggerUi.serve);
 app.use(require('./routes/index.js'));
 app.get('/api', swaggerUi.setup(swaggerDocument));
 app.use('/api/operations', require('./routes/operations.js'));
+
 //error 404
 app.use(function (req, res, next) {
   const error = new Error('Not found');
